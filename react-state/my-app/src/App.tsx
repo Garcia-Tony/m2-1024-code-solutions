@@ -6,19 +6,18 @@ import { ButtonContainer } from './ButtonContainer';
 import './App.css';
 
 const headerText = 'React Image Bank';
-const imageSrc = '/starry-sky.jpeg';
-const imageCap = 'A Beautiful Image of Space';
-const imageDescrip =
-  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam incidunt sit dolorum accusantium sapiente reiciendis maxime dolores ullam delectus, commodi placeat eveniet, quam voluptates facere et magnam architecto quaerat velit voluptas rerum quos asperiores quis in ! Nemo aut aliquam quas dolore quaerat, error numquam odio modi eos vero. Modi nisi eos autem ? Iusto hic impedit aspernatur labore quos nesciunt ? Ad dolore pariatur aperiam nemo, maiores laboriosam quam quod nisi ipsum, dicta sunt laborum similique repellat ? ';
+const imageSources: string[] = ['/cat.jpg', '/dog.avif'];
+const imageCaptions: string[] = ['Cat', 'Dog'];
+const imageDescriptions: string[] = ['A cute small kitten', 'A cute tiny dog'];
 const buttonLabel = 'Click for Next Image';
 
 export default function App() {
   return (
     <>
       <Header text={headerText} />
-      <ImageContainer src={imageSrc} />
-      <ImageCaption caption={imageCap} />
-      <ImageDescription desc={imageDescrip} />
+      <ImageContainer src={imageSources} />
+      <ImageCaption caption={imageCaptions} />
+      <ImageDescription desc={imageDescriptions} />
       <ButtonContainer label={buttonLabel} />
     </>
   );

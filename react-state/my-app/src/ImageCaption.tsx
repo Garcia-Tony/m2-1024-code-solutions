@@ -1,11 +1,23 @@
-type Props = {
-  caption: string;
+import { useState } from 'react';
+
+type Prop = {
+  caption: string[];
 };
 
-export function ImageCaption({ caption }: Props) {
+export function ImageCaption({ caption }: Prop) {
+  const [index, setIndex] = useState(0);
+
+  function handleClick() {
+    if (index >= caption.length - 1) {
+      setIndex(0);
+    } else {
+      setIndex(index + 1);
+    }
+  }
+
   return (
     <div>
-      <h3>{caption}</h3>
+      <h3 onClick={handleClick}>{caption[index]}</h3>
     </div>
   );
 }
