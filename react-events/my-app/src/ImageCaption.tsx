@@ -1,23 +1,13 @@
-import { useState } from 'react';
-
 type Props = {
   captions: string[];
+  index: number;
+  onClick: () => void;
 };
 
-export function ImageCaption({ captions }: Props) {
-  const [imageCapIndex, setImageCapIndex] = useState(0);
-
-  function handleClick() {
-    if (imageCapIndex >= captions.length - 1) {
-      setImageCapIndex(0);
-    } else {
-      setImageCapIndex(imageCapIndex + 1);
-    }
-  }
-
+export function ImageCaption({ captions, index, onClick }: Props) {
   return (
     <div>
-      <h3 onClick={handleClick}>{captions[imageCapIndex]}</h3>
+      <h3 onClick={onClick}>{captions[index]}</h3>
     </div>
   );
 }

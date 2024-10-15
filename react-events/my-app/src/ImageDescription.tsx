@@ -1,23 +1,13 @@
-import { useState } from 'react';
-
 type Props = {
   descs: string[];
+  index: number;
+  onClick: () => void;
 };
 
-export function ImageDescription({ descs }: Props) {
-  const [descIndex, setdescIndex] = useState(0);
-
-  function handleClick() {
-    if (descIndex >= descs.length - 1) {
-      setdescIndex(0);
-    } else {
-      setdescIndex(descIndex + 1);
-    }
-  }
-
+export function ImageDescription({ descs, index, onClick }: Props) {
   return (
     <div>
-      <p onClick={handleClick}>{descs[descIndex]}</p>
+      <p onClick={onClick}>{descs[index]}</p>
     </div>
   );
 }
