@@ -43,3 +43,38 @@
 .read-the-docs {
   color: #888;
 }
+
+.hot-button {
+  background-color: rgb(255, 255, 255);
+}
+
+.hot-button.cold {
+  background-color: rgb(27, 122, 162);
+}
+
+.hot-button.cool {
+  background-color: rgb(42, 12, 82);
+}
+
+.hot-button.tepid {
+  background-color: rgb(80, 37, 180);
+}
+
+.hot-button.warm {
+  background-color: red;
+}
+
+.hot-button.hot {
+  background-color: orange;
+  color: black;
+}
+
+.hot-button.nuclear {
+  background-color: yellow;
+  color: black;
+}
+
+.hot-button.atomic {
+  background-color: white;
+  color: black;
+}
