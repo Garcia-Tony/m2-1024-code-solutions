@@ -4,5 +4,7 @@ type Props = {
 };
 
 export function Name({ items, onIndex }: Props) {
-  return <div>{items[onIndex]}</div>;
+  return (
+    <div style={{ fontSize: '40px', color: 'black' }}>{items[onIndex]}</div>
+  );
 }

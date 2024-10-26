@@ -1,7 +1,17 @@
 type Props = {
-  items: string[];
+  onClick: () => void;
 };
 
-export function Next({ items }: Props) {
-  return <div>{items}</div>;
+export function Next({ onClick }: Props) {
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        border: '4px solid black',
+        fontSize: '20px',
+        outline: 'none',
+      }}>
+      Next
+    </button>
+  );
 }
