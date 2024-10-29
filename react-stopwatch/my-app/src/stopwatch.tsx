@@ -32,12 +32,10 @@ export function StopWatch() {
   return (
     <div>
       <div className="face-input" onClick={reset}>
-        {' '}
-        {time}{' '}
+        {time}
       </div>
 
       <button className="time-input" onClick={playPause}>
-        {' '}
         {icon}
       </button>
     </div>
