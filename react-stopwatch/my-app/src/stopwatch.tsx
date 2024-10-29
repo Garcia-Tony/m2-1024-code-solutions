@@ -29,6 +29,7 @@ export function StopWatch() {
     setPlay(false);
   };
 
+
   return (
     <div>
       <div className="face-input" onClick={reset}>
