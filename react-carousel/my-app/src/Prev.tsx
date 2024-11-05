@@ -11,6 +11,7 @@ export function Prev({ onClick }: Props) {
       style={{
         color: 'black',
         fontSize: '50px',
+        cursor: 'pointer',
         marginTop: '110px',
         alignContent: 'center',
         paddingRight: '50px',
