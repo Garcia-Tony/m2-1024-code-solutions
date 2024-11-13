@@ -1,34 +1,34 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '../../../../../vite.svg';
 import './App.css';
+import { Modal } from './modal';
+import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const handleDelete = () => {
+    alert('Something was deleted.');
+    setIsOpen(false);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <button onClick={handleOpen}>Delete Me!</button>
+
+      <Modal isOpen={isOpen} onClose={handleClose}>
+        <p>Do you really want to delete?</p>
+        <button onClick={handleDelete}>Delete</button>
+
+        <button onClick={handleClose}>Cancel</button>
+      </Modal>
+    </div>
   );
 }
 
