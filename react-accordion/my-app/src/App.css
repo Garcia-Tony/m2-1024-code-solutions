@@ -1,0 +1,98 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+body {
+  background-color: white;
+}
+
+p {
+  color: black;
+  border: 3px solid black;
+  font-size: 13px;
+  margin-top: 25px;
+  margin-bottom: -24px;
+  text-align: start;
+  padding-left: 3px;
+}
+
+h3 {
+  color: black;
+  background-color: lightgray;
+  border: 3px solid black;
+  font-size: 25px;
+  padding: 7px;
+  margin-bottom: -24px;
+  padding-right: 50px;
+  text-align: start;
+}
+
+.box {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.click {
+  cursor: pointer;
+  padding-right: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media screen and (width >= 600px) {
+  .box {
+    margin-left: 420px;
+    margin-right: 420px;
+  }
+}
+
+@media screen and (width >= 600px) {
+  .click {
+    cursor: pointer;
+    padding-right: 70px;
+    margin-left: 420px;
+    margin-right: 420px;
+  }
+}
